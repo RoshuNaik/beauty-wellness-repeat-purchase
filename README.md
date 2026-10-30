@@ -1,9 +1,16 @@
 # Predicting Customer Repeat Purchases in the Beauty & Wellness Industry
 
-**Data Science – Week 1: Orientation and Problem Definition**
+**Data Science – Week 1 (Problem Definition) and Week 2 (Data Sourcing Strategy)**
 Author: Roshan Jadhav
 
-> **Project status:** Problem definition and planning stage. No dataset has been analysed yet and no model has been trained. This repository contains no results or business-impact claims.
+> **Project status:** Planning stage (Weeks 1–2). No dataset has been downloaded or analysed yet and no model has been trained. This repository contains no results or business-impact claims.
+
+## Week 2 – Data sourcing strategy
+
+Ten public sources were reviewed (event logs, purchase histories, review data, product database, government safety data, search trends, open-data portal, social media). Recommended plan: **S1 (REES46 cosmetics events)** and **S2 (Open e-commerce 1.0, beauty subset)** as main datasets, **S3 (Olist)** as a cross-market check, others for enrichment/context. Some source pages could not be opened during the review and are marked *not verified*.
+
+- Full report: [docs/Week2_Data_Sourcing_Strategy_Report.pdf](docs/Week2_Data_Sourcing_Strategy_Report.pdf)
+- [Source catalogue](docs/source_catalog.md) · [EDA plan](docs/eda_plan.md) · [Cleaning plan](docs/cleaning_plan.md)
 
 ## Project question
 
@@ -71,12 +78,16 @@ See [docs/references.md](docs/references.md). Availability, licence and field co
 ├── requirements.txt
 ├── .gitignore
 ├── docs/
-│   ├── Week1_Beauty_Wellness_Data_Science_Report.docx   # full report
+│   ├── Week1_Beauty_Wellness_Data_Science_Report.docx   # Week 1 report
+│   ├── Week2_Data_Sourcing_Strategy_Report.pdf / .docx   # Week 2 report
+│   ├── source_catalog.md
+│   ├── eda_plan.md
+│   ├── cleaning_plan.md
 │   ├── analysis_plan.md
 │   ├── data_dictionary.md
 │   ├── data_quality_checklist.md
 │   └── references.md
-├── data/            # raw data is NOT committed (see data/README.md)
+├── data/            # raw/interim/processed – data is NOT committed (see data/README.md)
 ├── notebooks/       # EDA notebooks (next phase)
 └── src/             # scripts (next phase)
 ```
@@ -91,7 +102,8 @@ See [docs/references.md](docs/references.md). Availability, licence and field co
 
 ## Next steps
 
-- [ ] Verify and select a dataset (licence, access, fields)
+- [ ] Open S1, S2, S3 pages; confirm licence, files and size
+- [ ] Download and profile the data (Week 3)
 - [ ] Define "repeat purchase" and the prediction window
 - [ ] Complete the data-quality checklist
 - [ ] Perform EDA in `notebooks/`
