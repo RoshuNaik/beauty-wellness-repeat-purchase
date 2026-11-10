@@ -1,9 +1,10 @@
 # Predicting Customer Repeat Purchases in the Beauty & Wellness Industry
 
-**Data Science – Week 1 (Problem Definition) and Week 2 (Data Sourcing Strategy)**
+**Data Science – Week 1 (Problem Definition), Week 2 (Data Sourcing Strategy) and Week 3 (Data Cleaning & Preprocessing)**
+
 Author: Roshan Jadhav
 
-> **Project status:** Planning stage (Weeks 1–2). No dataset has been downloaded or analysed yet and no model has been trained. This repository contains no results or business-impact claims.
+> **Project status:** Planning and design stage (Weeks 1–3). No real dataset has been downloaded or analysed, the cleaning pipeline has not been run on real data, and no model has been trained. This repository contains no results or business-impact claims.
 
 ## Week 2 – Data sourcing strategy
 
@@ -11,6 +12,14 @@ Ten public sources were reviewed (event logs, purchase histories, review data, p
 
 - Full report: [docs/Week2_Data_Sourcing_Strategy_Report.pdf](docs/Week2_Data_Sourcing_Strategy_Report.pdf)
 - [Source catalogue](docs/source_catalog.md) · [EDA plan](docs/eda_plan.md) · [Cleaning plan](docs/cleaning_plan.md)
+
+## Week 3 – Data cleaning and preprocessing pipeline
+
+A reproducible Python (pandas + NumPy) workflow for beauty and wellness data (customer, appointment, service, rating and spend fields). Steps: preserve the raw file, inspect, standardise column names and text, remove exact duplicates, convert numbers and dates safely, validate business rules, handle missing values with documented rules (no invented IDs or dates; "Unknown" for categories; median imputation as a baseline), flag outliers with the IQR method instead of deleting them, create Min-Max normalised copies, and export a cleaned CSV plus an audit summary.
+
+> The Week 3 report uses an **illustrative schema** because no raw dataset was supplied. Column names and valid ranges must be confirmed against the real data before running the pipeline. Private customer data must never be uploaded to this public repository.
+
+- Report: [docs/Week3_Data_Cleaning_Preprocessing_Report.docx](docs/Week3_Data_Cleaning_Preprocessing_Report.docx)
 
 ## Project question
 
@@ -80,6 +89,7 @@ See [docs/references.md](docs/references.md). Availability, licence and field co
 ├── docs/
 │   ├── Week1_Beauty_Wellness_Data_Science_Report.docx   # Week 1 report
 │   ├── Week2_Data_Sourcing_Strategy_Report.pdf / .docx   # Week 2 report
+│   ├── Week3_Data_Cleaning_Preprocessing_Report.docx    # Week 3 report
 │   ├── source_catalog.md
 │   ├── eda_plan.md
 │   ├── cleaning_plan.md
@@ -103,7 +113,8 @@ See [docs/references.md](docs/references.md). Availability, licence and field co
 ## Next steps
 
 - [ ] Open S1, S2, S3 pages; confirm licence, files and size
-- [ ] Download and profile the data (Week 3)
+- [ ] Download and profile the real data
+- [ ] Map real column names and run the cleaning pipeline; add the cleaning summary
 - [ ] Define "repeat purchase" and the prediction window
 - [ ] Complete the data-quality checklist
 - [ ] Perform EDA in `notebooks/`
