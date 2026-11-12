@@ -1,10 +1,10 @@
 # Predicting Customer Repeat Purchases in the Beauty & Wellness Industry
 
-**Data Science – Week 1 (Problem Definition), Week 2 (Data Sourcing Strategy) and Week 3 (Data Cleaning & Preprocessing)**
+**Data Science – Week 1 (Problem Definition), Week 2 (Data Sourcing Strategy), Week 3 (Data Cleaning & Preprocessing) and Week 4 (EDA & Feature Engineering)**
 
 Author: Roshan Jadhav
 
-> **Project status:** Planning and design stage (Weeks 1–3). No real dataset has been downloaded or analysed, the cleaning pipeline has not been run on real data, and no model has been trained. This repository contains no results or business-impact claims.
+> **Project status:** Planning and design stage (Weeks 1–4). No real dataset has been downloaded or analysed, the cleaning and EDA workflows have not been run on real data, and no model has been trained. This repository contains no results or business-impact claims.
 
 ## Week 2 – Data sourcing strategy
 
@@ -20,6 +20,14 @@ A reproducible Python (pandas + NumPy) workflow for beauty and wellness data (cu
 > The Week 3 report uses an **illustrative schema** because no raw dataset was supplied. Column names and valid ranges must be confirmed against the real data before running the pipeline. Private customer data must never be uploaded to this public repository.
 
 - Report: [docs/Week3_Data_Cleaning_Preprocessing_Report.docx](docs/Week3_Data_Cleaning_Preprocessing_Report.docx)
+
+## Week 4 – EDA and feature engineering
+
+An analytical workflow for the cleaned (Week 3) beauty and wellness dataset: dataset profiling, missing-value and duplicate checks, descriptive statistics, category frequencies, service and city comparisons, monthly spend trends and correlation analysis (associations, not causation). Planned features: calendar variables (year, month, quarter, day of week, weekend flag), age groups, spend per visit and customer-level historical summaries, plus one-hot encoding for a baseline model-ready table. The report also covers feature leakage: history features must use only records available before the prediction date, and encoders/scalers must be fitted on training data only.
+
+> No real dataset was supplied, so **no numerical findings are reported**. Charts and insights will be added after the workflow is run on the actual cleaned CSV.
+
+- Report: [docs/Week4_EDA_Feature_Engineering_Report.docx](docs/Week4_EDA_Feature_Engineering_Report.docx)
 
 ## Project question
 
@@ -90,6 +98,7 @@ See [docs/references.md](docs/references.md). Availability, licence and field co
 │   ├── Week1_Beauty_Wellness_Data_Science_Report.docx   # Week 1 report
 │   ├── Week2_Data_Sourcing_Strategy_Report.pdf / .docx   # Week 2 report
 │   ├── Week3_Data_Cleaning_Preprocessing_Report.docx    # Week 3 report
+│   ├── Week4_EDA_Feature_Engineering_Report.docx        # Week 4 report
 │   ├── source_catalog.md
 │   ├── eda_plan.md
 │   ├── cleaning_plan.md
@@ -115,6 +124,7 @@ See [docs/references.md](docs/references.md). Availability, licence and field co
 - [ ] Open S1, S2, S3 pages; confirm licence, files and size
 - [ ] Download and profile the real data
 - [ ] Map real column names and run the cleaning pipeline; add the cleaning summary
+- [ ] Run the EDA / feature-engineering script on the cleaned CSV; add charts and findings
 - [ ] Define "repeat purchase" and the prediction window
 - [ ] Complete the data-quality checklist
 - [ ] Perform EDA in `notebooks/`
