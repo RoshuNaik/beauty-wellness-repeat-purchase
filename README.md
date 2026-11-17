@@ -1,10 +1,10 @@
 # Predicting Customer Repeat Purchases in the Beauty & Wellness Industry
 
-**Data Science – Week 1 (Problem Definition), Week 2 (Data Sourcing Strategy), Week 3 (Data Cleaning & Preprocessing), Week 4 (EDA & Feature Engineering) and Week 5 (Predictive Modeling)**
+**Data Science – Week 1 (Problem Definition), Week 2 (Data Sourcing Strategy), Week 3 (Data Cleaning & Preprocessing), Week 4 (EDA & Feature Engineering), Week 5 (Predictive Modeling) and Week 6 (Model Evaluation & Reporting)**
 
 Author: Roshan Jadhav
 
-> **Project status:** Planning and design stage (Weeks 1–5). No real dataset has been downloaded or analysed, the cleaning, EDA and modelling workflows have not been run on real data, and no model has been trained on real data. This repository contains no results or business-impact claims.
+> **Project status:** Design and demonstration stage (Weeks 1–6). No real dataset has been downloaded or analysed. The only numerical results in this repository (Weeks 5–6) come from a **synthetic demonstration dataset** and are **not real business findings**. The cleaning, EDA and modelling workflows must be re-run on real data before any business conclusion is drawn.
 
 ## Week 2 – Data sourcing strategy
 
@@ -36,6 +36,25 @@ A modelling strategy with two supervised tasks: **regression** (predict spend pe
 > The report's demonstration uses a **synthetic sample dataset** because no real CSV was supplied. Any metrics it produces are for learning only and **must not be presented as real business findings**. The model comparison must be re-run on real data.
 
 - Report: [docs/Week5_Predictive_Modeling_Report.docx](docs/Week5_Predictive_Modeling_Report.docx)
+
+## Week 6 – Model evaluation, reporting and business impact
+
+Evaluation and communication of the Week 5 models on a **synthetic dataset of 1,200 example customers** (80:20 train/test split; preprocessing fitted on training data through scikit-learn pipelines). The report explains each metric in business language, compares models, proposes a validation plan (k-fold cross-validation, untouched holdout set, leakage checks, ongoing monitoring), gives business recommendations (including controlled tests of campaigns and fairness/privacy review) and explains how to present results to a non-technical audience.
+
+**Demonstration results – synthetic data, not real business findings**
+
+| Task | Model | Key metrics |
+|---|---|---|
+| Regression (spend per visit) | Linear Regression | MAE 103.93, RMSE 130.48, R² 0.960 |
+| Regression (spend per visit) | Decision Tree Regressor | MAE 130.75, RMSE 164.47, R² 0.936 |
+| Classification (will return) | Logistic Regression | Accuracy 0.675, Precision 0.625, Recall 0.510, F1 0.562, ROC-AUC 0.754 |
+| Classification (will return) | Decision Tree Classifier | Accuracy 0.642, Precision 0.561, Recall 0.561, F1 0.561, ROC-AUC 0.693 |
+
+These scores only illustrate the evaluation workflow. They must be recomputed on real data, and they are not a guarantee of accuracy for future customers.
+
+> Weeks 5–6 use a salon-style customer schema (spend per visit, `will_return`), which is a related but different framing from the retail repeat-purchase problem defined in Week 1.
+
+- Report: [docs/Week6_Model_Evaluation_Report.docx](docs/Week6_Model_Evaluation_Report.docx)
 
 ## Project question
 
@@ -108,6 +127,7 @@ See [docs/references.md](docs/references.md). Availability, licence and field co
 │   ├── Week3_Data_Cleaning_Preprocessing_Report.docx    # Week 3 report
 │   ├── Week4_EDA_Feature_Engineering_Report.docx        # Week 4 report
 │   ├── Week5_Predictive_Modeling_Report.docx            # Week 5 report
+│   ├── Week6_Model_Evaluation_Report.docx               # Week 6 report
 │   ├── source_catalog.md
 │   ├── eda_plan.md
 │   ├── cleaning_plan.md
@@ -134,7 +154,7 @@ See [docs/references.md](docs/references.md). Availability, licence and field co
 - [ ] Download and profile the real data
 - [ ] Map real column names and run the cleaning pipeline; add the cleaning summary
 - [ ] Run the EDA / feature-engineering script on the cleaned CSV; add charts and findings
-- [ ] Replace the synthetic data in the Week 5 modelling script with real data and re-run the model comparison
+- [ ] Replace the synthetic data in the Week 5–6 modelling script with real data; re-run the model comparison and regenerate all metrics and charts
 - [ ] Define "repeat purchase" and the prediction window
 - [ ] Complete the data-quality checklist
 - [ ] Perform EDA in `notebooks/`
