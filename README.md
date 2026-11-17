@@ -1,10 +1,10 @@
 # Predicting Customer Repeat Purchases in the Beauty & Wellness Industry
 
-**Data Science – Week 1 (Problem Definition), Week 2 (Data Sourcing Strategy), Week 3 (Data Cleaning & Preprocessing) and Week 4 (EDA & Feature Engineering)**
+**Data Science – Week 1 (Problem Definition), Week 2 (Data Sourcing Strategy), Week 3 (Data Cleaning & Preprocessing), Week 4 (EDA & Feature Engineering) and Week 5 (Predictive Modeling)**
 
 Author: Roshan Jadhav
 
-> **Project status:** Planning and design stage (Weeks 1–4). No real dataset has been downloaded or analysed, the cleaning and EDA workflows have not been run on real data, and no model has been trained. This repository contains no results or business-impact claims.
+> **Project status:** Planning and design stage (Weeks 1–5). No real dataset has been downloaded or analysed, the cleaning, EDA and modelling workflows have not been run on real data, and no model has been trained on real data. This repository contains no results or business-impact claims.
 
 ## Week 2 – Data sourcing strategy
 
@@ -28,6 +28,14 @@ An analytical workflow for the cleaned (Week 3) beauty and wellness dataset: dat
 > No real dataset was supplied, so **no numerical findings are reported**. Charts and insights will be added after the workflow is run on the actual cleaned CSV.
 
 - Report: [docs/Week4_EDA_Feature_Engineering_Report.docx](docs/Week4_EDA_Feature_Engineering_Report.docx)
+
+## Week 5 – Predictive modelling and algorithm selection
+
+A modelling strategy with two supervised tasks: **regression** (predict spend per visit) and **classification** (predict whether a customer will return, `will_return`). Candidate features: age, previous visits, membership, service type, rating, days since last visit and discount percentage. Models compared: Linear Regression and Decision Tree Regression; Logistic Regression and Decision Tree Classification. Metrics: MAE, MSE, RMSE and R² for regression; accuracy, precision, recall, F1-score and confusion matrix for classification. The report also covers train/test splitting (stratified for classification), cross-validation, data leakage, overfitting and underfitting, and responsible business use.
+
+> The report's demonstration uses a **synthetic sample dataset** because no real CSV was supplied. Any metrics it produces are for learning only and **must not be presented as real business findings**. The model comparison must be re-run on real data.
+
+- Report: [docs/Week5_Predictive_Modeling_Report.docx](docs/Week5_Predictive_Modeling_Report.docx)
 
 ## Project question
 
@@ -99,6 +107,7 @@ See [docs/references.md](docs/references.md). Availability, licence and field co
 │   ├── Week2_Data_Sourcing_Strategy_Report.pdf / .docx   # Week 2 report
 │   ├── Week3_Data_Cleaning_Preprocessing_Report.docx    # Week 3 report
 │   ├── Week4_EDA_Feature_Engineering_Report.docx        # Week 4 report
+│   ├── Week5_Predictive_Modeling_Report.docx            # Week 5 report
 │   ├── source_catalog.md
 │   ├── eda_plan.md
 │   ├── cleaning_plan.md
@@ -125,6 +134,7 @@ See [docs/references.md](docs/references.md). Availability, licence and field co
 - [ ] Download and profile the real data
 - [ ] Map real column names and run the cleaning pipeline; add the cleaning summary
 - [ ] Run the EDA / feature-engineering script on the cleaned CSV; add charts and findings
+- [ ] Replace the synthetic data in the Week 5 modelling script with real data and re-run the model comparison
 - [ ] Define "repeat purchase" and the prediction window
 - [ ] Complete the data-quality checklist
 - [ ] Perform EDA in `notebooks/`
